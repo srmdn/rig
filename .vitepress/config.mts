@@ -27,8 +27,7 @@ export default defineConfig({
 
     appearance: false,
 
-    sidebar: {
-      "/": [
+    sidebar: [
       {
         text: "Getting Started",
         items: [
@@ -90,7 +89,6 @@ export default defineConfig({
         ],
       },
     ],
-    },
 
     socialLinks: [
       { icon: "github", link: "https://github.com/srmdn/rig" },
