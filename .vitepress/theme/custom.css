@@ -166,6 +166,12 @@ html.dark {
 
 .VPNav {
   border-bottom: 1px solid #333333;
+}
+
+/* backdrop-filter must NOT be on .VPNav — it would make .VPNav the
+   containing block for position:fixed children (including VPNavScreen),
+   collapsing the overlay to zero height on mobile. */
+.VPNavBar {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
