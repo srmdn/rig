@@ -9,6 +9,13 @@ export default defineConfig({
   lastUpdated: true,
   appearance: false,
 
+  markdown: {
+    theme: {
+      light: 'github-light-default',
+      dark: 'one-dark-pro',
+    },
+  },
+
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
     ["meta", { name: "twitter:card", content: "summary" }],
