@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="b">
+      <rect width="32" height="32" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .scanline {
+      animation: scan 2s linear infinite;
+    }
+    @keyframes scan {
+      0%   { transform: translateY(0px);  opacity: 0;    }
+      8%   {                              opacity: 0.75; }
+      88%  {                              opacity: 0.75; }
+      100% { transform: translateY(24px); opacity: 0;    }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scanline { animation: none; opacity: 0; }
+    }
+  </style>
+
+  <!-- background -->
+  <rect width="32" height="32" rx="4" fill="#1a1a1a"/>
+
+  <!-- R: stem -->
+  <rect x="6"  y="5"  width="5"  height="22" fill="#cfcecd"/>
+  <!-- R: top bar -->
+  <rect x="11" y="5"  width="10" height="4"  fill="#cfcecd"/>
+  <!-- R: bowl right side (rx rounds the outer corner) -->
+  <rect x="19" y="5"  width="4"  height="13" fill="#cfcecd" rx="2"/>
+  <!-- R: mid bar (closes the bowl, starts the leg junction) -->
+  <rect x="11" y="14" width="10" height="4"  fill="#cfcecd"/>
+  <!-- R: leg -->
+  <polygon points="11,18 16,18 27,27 22,27"  fill="#cfcecd"/>
+
+  <!-- scan line clipped to icon bounds -->
+  <g clip-path="url(#b)">
+    <rect class="scanline" x="3" y="4" width="26" height="1.5" fill="#f5f5f5" rx="0.5"/>
+  </g>
+</svg>

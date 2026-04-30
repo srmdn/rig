@@ -2,18 +2,19 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "Rig",
-  description: "Community wiki for OpenCode & oMO  --  agent pipeline, skills ecosystem, playbooks, and setup guides.",
+  description: "Community wiki for OpenCode & oMO — agent pipeline, skills ecosystem, playbooks, and setup guides.",
 
   lang: "en-US",
   cleanUrls: true,
   lastUpdated: true,
+  appearance: false,
 
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
     ["meta", { name: "twitter:card", content: "summary" }],
     ["meta", { name: "twitter:site", content: "@srmdn" }],
     ["meta", { property: "og:type", content: "website" }],
-    ["meta", { property: "og:title", content: "Rig  --  OpenCode & oMO Community Wiki" }],
+    ["meta", { property: "og:title", content: "Rig — OpenCode & oMO Community Wiki" }],
     ["meta", { property: "og:description", content: "Agent pipeline, skills ecosystem, playbooks, and setup guides for OpenCode and oh-my-openagent." }],
   ],
 
@@ -24,8 +25,6 @@ export default defineConfig({
       { text: "Start Here", link: "/getting-started/" },
       { text: "Pipeline", link: "/pipeline/" },
     ],
-
-    appearance: false,
 
     sidebar: [
       {
