@@ -25,6 +25,8 @@ export default defineConfig({
       { text: "Pipeline", link: "/pipeline/" },
     ],
 
+    appearance: false,
+
     sidebar: {
       "/": [
       {
