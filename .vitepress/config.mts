@@ -18,7 +18,6 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: "/logo.svg",
     siteTitle: "Rig",
 
     nav: [
