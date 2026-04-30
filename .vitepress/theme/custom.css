@@ -214,29 +214,23 @@ div[class*='language-'] {
   border-radius: 6px;
 }
 
-/* Bash / shell blocks: override the one-dark-pro background to match site,
-   and add a left accent to make command sections visually distinct. */
+/* Override one-dark-pro's native #282c34 background across all blocks to match site theme */
+div[class*='language-'] pre.shiki {
+  background-color: #0d0d0d !important;
+}
+
+/* Force dark token colors for all blocks in forced-dark mode */
+div[class*='language-'] .shiki span {
+  color: var(--shiki-dark, inherit) !important;
+}
+
+/* Bash / shell blocks: left accent to visually distinguish command sections */
 div.language-bash,
 div.language-sh,
 div.language-shell,
 div.language-zsh {
   border-left: 3px solid #4d78cc;
   border-radius: 6px;
-}
-
-div.language-bash pre.shiki,
-div.language-sh pre.shiki,
-div.language-shell pre.shiki,
-div.language-zsh pre.shiki {
-  background-color: #0d0d0d !important;
-}
-
-/* Force dark token colors (one-dark-pro) for bash blocks in forced-dark mode */
-div.language-bash .shiki span,
-div.language-sh .shiki span,
-div.language-shell .shiki span,
-div.language-zsh .shiki span {
-  color: var(--shiki-dark, inherit) !important;
 }
 
 :root :not(pre) > code,
