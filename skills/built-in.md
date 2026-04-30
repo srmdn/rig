@@ -4,14 +4,14 @@ Built-in skills ship with every OpenCode + oMO installation. No setup, no config
 
 ## git-master
 
-**Trigger:** Any git operation  --  commits, rebases, squash, history search, blame, bisect.
+**Trigger:** Any git operation — commits, rebases, squash, history search, blame, bisect.
 
 `git-master` wraps all git operations with atomic commit discipline, safe rebase/squash workflows, and history-aware search. It prevents common git mistakes (force-pushing to main, losing uncommitted work) and structures commits for readability.
 
 When to use it:
 
 - Committing changes with meaningful messages
-- Interactive rebase workflows (but not via `-i`  --  it uses non-interactive equivalents)
+- Interactive rebase workflows (but not via `-i` — it uses non-interactive equivalents)
 - Finding when something was introduced (`git log -S`, `git blame`)
 - Squashing commits safely
 
@@ -43,7 +43,7 @@ task(category="unspecified-high", load_skills=["review-work"], prompt="Review th
 
 ## ai-slop-remover
 
-**Trigger:** When you want to clean up AI-generated code smells. Operates on a single file at a time  --  for multiple files, run in parallel.
+**Trigger:** When you want to clean up AI-generated code smells. Operates on a single file at a time — for multiple files, run in parallel.
 
 `ai-slop-remover` identifies and removes common AI-generated code patterns while preserving functionality:
 
@@ -60,7 +60,7 @@ task(category="quick", load_skills=["ai-slop-remover"], prompt="Remove AI slop f
 
 ## frontend-ui-ux
 
-**Trigger:** Building any web UI  --  components, pages, layouts, dashboards, landing pages.
+**Trigger:** Building any web UI — components, pages, layouts, dashboards, landing pages.
 
 `frontend-ui-ux` applies design-first principles to frontend work. It enforces:
 
@@ -86,4 +86,4 @@ If a built-in skill conflicts with your workflow, disable it in your oMO config:
 }
 ```
 
-Note: `playwright` and `agent-browser` are also built-in skills that can be disabled. The `disabled_skills` array accepts any skill name  --  built-in or plugin.
+Note: `playwright` and `agent-browser` are also built-in skills that can be disabled. The `disabled_skills` array accepts any skill name — built-in or plugin.

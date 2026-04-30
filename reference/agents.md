@@ -17,7 +17,7 @@ The main orchestrator. Controls routing logic and delegation strategy.
 
 ## Oracle  
 
-Read-only consultant for architecture and debugging. Expensive to run  --  use sparingly.
+Read-only consultant for architecture and debugging. Expensive to run — use sparingly.
 
 ```json
 {

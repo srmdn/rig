@@ -6,22 +6,22 @@ oh-my-openagent (oMO) is a configuration layer and skill ecosystem that sits on 
 
 OpenCode on its own is a single-agent chat interface. You type a prompt, the agent responds. That works, but it has limits:
 
-- **No planning step**  --  the agent jumps straight into code without thinking through the approach.
-- **No specialization**  --  one agent does everything, even tasks that benefit from focused expertise.
-- **No project conventions**  --  every session starts from scratch unless you manually paste context.
+- **No planning step**: the agent jumps straight into code without thinking through the approach.
+- **No specialization**: one agent does everything, even tasks that benefit from focused expertise.
+- **No project conventions**: every session starts from scratch unless you manually paste context.
 
 oMO solves this by layering on:
 
-- **The agent pipeline**  --  a structured flow where Prometheus plans, Atlas orchestrates, and Sisyphus executes. Each agent has a defined role. See [The oMO Pipeline](/pipeline/) for the full breakdown.
-- **Skills**  --  reusable prompt templates and workflows you can invoke with slash commands (e.g., `/tdd`, `/diagnose`, `/grill-me`). See [Skills Ecosystem](/skills/).
-- **Project conventions**  --  `CLAUDE.md` and `AGENTS.md` files that tell agents about your stack, rules, and preferences. No more pasting context every session.
-- **Category agents**  --  specialized sub-agents for visual engineering, documentation, exploration, and more. See [Category Agents](/pipeline/categories).
+- **The agent pipeline**: a structured flow where Prometheus plans, Atlas orchestrates, and Sisyphus executes. Each agent has a defined role. See [The oMO Pipeline](/pipeline/) for the full breakdown.
+- **Skills**: reusable prompt templates and workflows you can invoke with slash commands (e.g., `/tdd`, `/diagnose`, `/grill-me`). See [Skills Ecosystem](/skills/).
+- **Project conventions**: `CLAUDE.md` and `AGENTS.md` files that tell agents about your stack, rules, and preferences. No more pasting context every session.
+- **Category agents**: specialized sub-agents for visual engineering, documentation, exploration, and more. See [Category Agents](/pipeline/categories).
 
 ## Prerequisites
 
-- **OpenCode** installed and working  --  see [Install OpenCode](/getting-started/install-opencode) if you haven't yet.
-- **Git**  --  oMO is installed by cloning its repository.
-- **Node.js** 18+  --  some skills and tooling depend on it.
+- **OpenCode** installed and working — see [Install OpenCode](/getting-started/install-opencode) if you haven't yet.
+- **Git**: oMO is installed by cloning its repository.
+- **Node.js** 18+ — some skills and tooling depend on it.
 
 ## Install oMO
 
@@ -42,9 +42,9 @@ cd ~/.config/opencode/install
 
 The installer does three things:
 
-1. **Links configuration files**  --  connects oMO's `oh-my-openagent.json` to OpenCode's config so the pipeline and agents are recognized.
-2. **Installs default skills**  --  copies the built-in skill set into `~/.config/opencode/skills/`.
-3. **Creates project templates**  --  sets up default `CLAUDE.md` and `AGENTS.md` templates you can customize per project.
+1. **Links configuration files**: connects oMO's `oh-my-openagent.json` to OpenCode's config so the pipeline and agents are recognized.
+2. **Installs default skills**: copies the built-in skill set into `~/.config/opencode/skills/`.
+3. **Creates project templates**: sets up default `CLAUDE.md` and `AGENTS.md` templates you can customize per project.
 
 ### 3. Verify the installation
 
@@ -101,7 +101,7 @@ git pull
 ./install.sh
 ```
 
-The installer is idempotent  --  running it again won't overwrite your customizations unless the upstream defaults have changed.
+The installer is idempotent — running it again won't overwrite your customizations unless the upstream defaults have changed.
 
 ::: warning
 If you've customized `oh-my-openagent.json` or skill files, check for conflicts after updating. The installer preserves local changes where possible, but major version bumps may require manual merging.
@@ -109,4 +109,4 @@ If you've customized `oh-my-openagent.json` or skill files, check for conflicts 
 
 ## Next step
 
-With both OpenCode and oMO installed, you're ready for [Your First Session](/getting-started/first-session)  --  where you'll open a project, ask Sisyphus a question, and see the pipeline in action.
+With both OpenCode and oMO installed, you're ready for [Your First Session](/getting-started/first-session) — where you'll open a project, ask Sisyphus a question, and see the pipeline in action.

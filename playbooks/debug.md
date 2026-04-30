@@ -4,15 +4,15 @@
 
 ## The Flow
 
-1. **Reproduce**  --  Describe the bug to Sisyphus with steps to reproduce
-2. **Diagnose**  --  Sisyphus fires explore agents to find relevant code, uses /diagnose skill for structured debugging
-3. **Fix**  --  Sisyphus delegates the fix to a category agent, verifies with tests
-4. **Regression test**  --  Verify the fix doesn't break anything else
+1. **Reproduce**: Describe the bug to Sisyphus with steps to reproduce
+2. **Diagnose**: Sisyphus fires explore agents to find relevant code, uses /diagnose skill for structured debugging
+3. **Fix**: Sisyphus delegates the fix to a category agent, verifies with tests
+4. **Regression test**: Verify the fix doesn't break anything else
 
 ## Example
 
 ```
-User: "Login is broken  --  I get a 500 error when submitting credentials"
+User: "Login is broken — I get a 500 error when submitting credentials"
 
 Sisyphus:
   - Explores auth middleware, login handler, error handling

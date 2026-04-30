@@ -8,13 +8,13 @@ OpenCode is the AI coding CLI. oMO (oh-my-openagent) is an agent orchestration l
 
 ### Do I need oMO?
 
-No  --  OpenCode works great on its own. oMO adds planning, delegation, and verification for larger projects. Try OpenCode first, add oMO when you want the pipeline.
+No — OpenCode works great on its own. oMO adds planning, delegation, and verification for larger projects. Try OpenCode first, add oMO when you want the pipeline.
 
 ## Pipeline
 
 ### When does the pipeline fire?
 
-Only when you type `/start-work`. Normal conversation does not trigger it  --  Sisyphus handles those directly.
+Only when you type `/start-work`. Normal conversation does not trigger it — Sisyphus handles those directly.
 
 ### Can I skip Prometheus and go straight to Atlas?
 

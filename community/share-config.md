@@ -31,6 +31,6 @@ Created a useful skill with `/write-a-skill`? Share it:
 
 ## Submission Channels
 
-- **GitHub PR**  --  Add to `reference/examples/` or `community/skills/`
-- **GitHub Discussion**  --  Start a discussion in the repo
-- **Issue**  --  Open an issue with `[config-share]` or `[skill-share]` prefix
+- **GitHub PR**: Add to `reference/examples/` or `community/skills/`
+- **GitHub Discussion**: Start a discussion in the repo
+- **Issue**: Open an issue with `[config-share]` or `[skill-share]` prefix

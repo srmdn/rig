@@ -6,7 +6,7 @@ OpenCode is the CLI and TUI that runs your AI coding sessions. Before you can us
 
 - **Node.js** 18 or later (for npm install)
 - **Go** 1.22 or later (if building from source)
-- **Git**  --  OpenCode integrates with your repo history
+- **Git**: OpenCode integrates with your repo history
 - A terminal (macOS Terminal, iTerm2, Warp, etc.)
 
 ## Install with Homebrew (macOS)
@@ -70,7 +70,7 @@ Run:
 opencode --version
 ```
 
-You should see a version number printed. If you get `command not found`, the binary isn't on your PATH  --  check your shell profile (`~/.zshrc`, `~/.bashrc`) or reinstall.
+You should see a version number printed. If you get `command not found`, the binary isn't on your PATH — check your shell profile (`~/.zshrc`, `~/.bashrc`) or reinstall.
 
 ## First launch
 
@@ -85,7 +85,7 @@ The first time you run OpenCode, it will:
 
 1. Create a config directory at `~/.config/opencode/`
 2. Prompt you to set up an API key for your chosen model provider (Anthropic, OpenAI, etc.)
-3. Open the TUI  --  a terminal-based interface where you chat with your coding agent
+3. Open the TUI — a terminal-based interface where you chat with your coding agent
 
 ::: tip
 OpenCode stores sessions, settings, and provider configs under `~/.config/opencode/`. You can inspect or edit these files directly, but most configuration happens through the TUI or through oMO (which we'll set up next).
@@ -95,11 +95,11 @@ OpenCode stores sessions, settings, and provider configs under `~/.config/openco
 
 Out of the box, OpenCode provides:
 
-- **A TUI**  --  chat with an AI agent inside your terminal
-- **File operations**  --  the agent can read, write, and edit files in your project
-- **Shell access**  --  the agent can run commands (with your approval)
-- **Session history**  --  conversations are saved and resumable
-- **Model selection**  --  switch between providers and models
+- **A TUI**: chat with an AI agent inside your terminal
+- **File operations**: the agent can read, write, and edit files in your project
+- **Shell access**: the agent can run commands (with your approval)
+- **Session history**: conversations are saved and resumable
+- **Model selection**: switch between providers and models
 
 This is powerful on its own. But when you add oMO, you get a structured multi-agent pipeline, curated skills, and project conventions that make the whole system more reliable and productive.
 

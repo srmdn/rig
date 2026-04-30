@@ -4,7 +4,7 @@ Skills are the extension layer that makes your agent actually useful. Without sk
 
 ## What Are Skills?
 
-A skill is a packaged set of instructions, workflows, and (optionally) embedded MCP servers that an agent loads on-demand. Skills are not prompts  --  they carry:
+A skill is a packaged set of instructions, workflows, and (optionally) embedded MCP servers that an agent loads on-demand. Skills are not prompts — they carry:
 
 - **Domain-tuned system instructions** that reshape how the agent thinks about a task
 - **Step-by-step workflows** with checklists and decision trees
@@ -33,7 +33,7 @@ Ships with every OpenCode + oMO install. No configuration needed. Includes `git-
 
 ### Category System
 
-Categories are not skills in the traditional sense  --  they're **agent profiles** that map task types to optimized models. When Sisyphus delegates work, it picks a category (not a model). The category determines which model runs, what fallback chain to use, and what behavior to expect.
+Categories are not skills in the traditional sense — they're **agent profiles** that map task types to optimized models. When Sisyphus delegates work, it picks a category (not a model). The category determines which model runs, what fallback chain to use, and what behavior to expect.
 
 → [Category System](/skills/categories)
 
@@ -45,13 +45,13 @@ Installed skills that extend agent capabilities with domain-specific workflows. 
 
 ### MCP Integration
 
-Model Context Protocol servers extend agents with external tools  --  browser automation, database access, filesystem operations, and more. Skills can embed their own MCP servers, keeping context clean.
+Model Context Protocol servers extend agents with external tools — browser automation, database access, filesystem operations, and more. Skills can embed their own MCP servers, keeping context clean.
 
 → [MCP Integration](/skills/mcp)
 
 ### Creating Your Own
 
-Anyone can write a skill. The `write-a-skill` tool scaffolds the structure, and the SKILL.md format is designed for progressive disclosure  --  agents see the description first, then load full instructions on demand.
+Anyone can write a skill. The `write-a-skill` tool scaffolds the structure, and the SKILL.md format is designed for progressive disclosure — agents see the description first, then load full instructions on demand.
 
 → [Create Your Own](/skills/create)
 
@@ -63,7 +63,7 @@ Skills compose with categories and with each other. The category provides the ex
 task(category="deep", load_skills=["tdd"], prompt="Add user registration")
 ```
 
-This fires a `deep` category agent (premium model, thorough behavior) with the `tdd` skill loaded (red-green-refactor workflow). The category and skill are independent  --  you could run `tdd` on a `quick` category for a small fix, or on `deep` for a full feature.
+This fires a `deep` category agent (premium model, thorough behavior) with the `tdd` skill loaded (red-green-refactor workflow). The category and skill are independent — you could run `tdd` on a `quick` category for a small fix, or on `deep` for a full feature.
 
 Common compositions:
 
@@ -73,12 +73,12 @@ Common compositions:
 | Debug a production issue | `deep` | `diagnose` |
 | Write tests for a feature | `deep` | `tdd` |
 | Plan a new project | `ultrabrain` | `grill-with-docs` |
-| Quick typo fix | `quick` |  --  |
+| Quick typo fix | `quick` | — |
 | Review your work | `unspecified-high` | `review-work` |
 
 ## Skill Discovery
 
-Agents discover skills through their descriptions. Every skill has a `description` field in its frontmatter  --  this is the only thing the agent sees when deciding which skill to load. Good descriptions include:
+Agents discover skills through their descriptions. Every skill has a `description` field in its frontmatter — this is the only thing the agent sees when deciding which skill to load. Good descriptions include:
 
 1. What the skill does
 2. When to trigger it (specific keywords, contexts, file types)

@@ -1,13 +1,13 @@
-# Sisyphus  --  Executor
+# Sisyphus: Executor
 
 Sisyphus is the default agent. When you open a conversation, you're talking to Sisyphus. It handles most tasks directly and delegates to specialist agents when needed.
 
 ## What Sisyphus Does
 
 - **Answers questions** about your codebase
-- **Makes code changes**  --  from one-liners to multi-file features
-- **Routes to specialists**  --  delegates to the right agent for the job
-- **Verifies its work**  --  runs build, tests, and diagnostics after changes
+- **Makes code changes**: from one-liners to multi-file features
+- **Routes to specialists**: delegates to the right agent for the job
+- **Verifies its work**: runs build, tests, and diagnostics after changes
 
 ## Smart Routing
 
@@ -58,10 +58,10 @@ Sisyphus is your starting point for every interaction:
 
 Most of the time, Sisyphus handles your request without the full pipeline:
 
-- **Small changes**  --  Add a comment, rename a variable, fix a typo
-- **Bug fixes**  --  Reproduce, diagnose, fix, verify
-- **Questions**  --  "What does this function do?", "Where is the auth middleware?"
-- **Single-feature additions**  --  "Add password reset" (see [Add a Feature](/playbooks/add-feature))
+- **Small changes**: Add a comment, rename a variable, fix a typo
+- **Bug fixes**: Reproduce, diagnose, fix, verify
+- **Questions**: "What does this function do?", "Where is the auth middleware?"
+- **Single-feature additions**: "Add password reset" (see [Add a Feature](/playbooks/add-feature))
 
 ## When Sisyphus Escalates
 
@@ -101,7 +101,7 @@ See the [Skills Ecosystem](/skills/) for available skills and how to create your
 
 ## See Also
 
-- [Oracle  --  Consultant](/pipeline/oracle)  --  When and how Oracle gets involved
-- [Category Agents](/pipeline/categories)  --  What each category is optimized for
-- [Add a Feature](/playbooks/add-feature)  --  Direct Sisyphus workflow
-- [Debug a Bug](/playbooks/debug)  --  Sisyphus + Oracle for hard bugs
+- [Oracle: Consultant](/pipeline/oracle) — When and how Oracle gets involved
+- [Category Agents](/pipeline/categories) — What each category is optimized for
+- [Add a Feature](/playbooks/add-feature) — Direct Sisyphus workflow
+- [Debug a Bug](/playbooks/debug) — Sisyphus + Oracle for hard bugs

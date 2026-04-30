@@ -1,6 +1,6 @@
 # Category System
 
-Categories are agent profiles that map task types to optimized models. They're not skills  --  they're the **execution layer** that determines *how* a task runs. Skills determine *what* the agent knows.
+Categories are agent profiles that map task types to optimized models. They're not skills — they're the **execution layer** that determines *how* a task runs. Skills determine *what* the agent knows.
 
 ## How Categories Work
 
@@ -30,14 +30,14 @@ The agent says what *kind* of work it is. The harness picks the right model. You
 
 ### When Each Category Fires
 
-- **`visual-engineering`**  --  Any task involving UI, styling, layout, animation, or visual design. The model is tuned for design taste and CSS expertise.
-- **`ultrabrain`**  --  Architecture decisions, complex algorithmic problems, multi-step reasoning. Routes to the strongest reasoning model available.
-- **`deep`**  --  Autonomous work that requires thorough exploration: debugging, refactoring, research-heavy tasks. The model has room to think deeply.
-- **`artistry`**  --  Creative exploration, brainstorming, alternative approaches. Medium-tier model with creative tendencies.
-- **`quick`**  --  Trivial changes: typos, single-line fixes, small config edits. Uses the fastest available model.
-- **`unspecified-low`**  --  Tasks that don't fit other categories but don't need premium compute.
-- **`unspecified-high`**  --  Tasks that don't fit other categories but need premium compute.
-- **`writing`**  --  Documentation, README files, comments, prose. Uses a model good at natural language.
+- **`visual-engineering`**: Any task involving UI, styling, layout, animation, or visual design. The model is tuned for design taste and CSS expertise.
+- **`ultrabrain`**: Architecture decisions, complex algorithmic problems, multi-step reasoning. Routes to the strongest reasoning model available.
+- **`deep`**: Autonomous work that requires thorough exploration: debugging, refactoring, research-heavy tasks. The model has room to think deeply.
+- **`artistry`**: Creative exploration, brainstorming, alternative approaches. Medium-tier model with creative tendencies.
+- **`quick`**: Trivial changes: typos, single-line fixes, small config edits. Uses the fastest available model.
+- **`unspecified-low`**: Tasks that don't fit other categories but don't need premium compute.
+- **`unspecified-high`**: Tasks that don't fit other categories but need premium compute.
+- **`writing`**: Documentation, README files, comments, prose. Uses a model good at natural language.
 
 ## Category + Skill Composition
 
@@ -65,7 +65,7 @@ task(category="ultrabrain", load_skills=["improve-codebase-architecture"], promp
 | Debug a production issue | `deep` | `diagnose` | Thorough exploration with structured diagnosis |
 | Write tests for a feature | `deep` | `tdd` | Methodical test-first on a strong model |
 | Plan a new project | `ultrabrain` | `grill-with-docs` | Hard reasoning with domain-aware planning |
-| Quick typo fix | `quick` |  --  | Fast model, no skill overhead |
+| Quick typo fix | `quick` | — | Fast model, no skill overhead |
 | Review your work | `unspecified-high` | `review-work` | Premium model for thorough review |
 | Write documentation | `writing` | `docs-writer` | Prose-optimized model with docs skill |
 | Refactor architecture | `deep` | `improve-codebase-architecture` | Deep model with architecture analysis |
