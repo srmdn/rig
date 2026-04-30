@@ -154,7 +154,7 @@ Atlas reads the task description and assigns the category that best matches the 
 
 ## See Also
 
-- [Sisyphus — Executor](/pipeline/sisyphus) — How Sisyphus routes to categories
-- [Atlas — Orchestrator](/pipeline/atlas) — How Atlas assigns categories in the pipeline
-- [Skills Ecosystem](/skills/) — Available skills and how they compose with categories
-- [Add a Feature](/playbooks/add-feature) — Category delegation in practice
+- [Sisyphus  --  Executor](/pipeline/sisyphus)  --  How Sisyphus routes to categories
+- [Atlas  --  Orchestrator](/pipeline/atlas)  --  How Atlas assigns categories in the pipeline
+- [Skills Ecosystem](/skills/)  --  Available skills and how they compose with categories
+- [Add a Feature](/playbooks/add-feature)  --  Category delegation in practice

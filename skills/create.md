@@ -1,6 +1,6 @@
 # Create Your Own Skills
 
-Anyone can write a skill. The `write-a-skill` tool scaffolds the structure, and the SKILL.md format is designed for progressive disclosure — agents see the description first, then load full instructions on demand.
+Anyone can write a skill. The `write-a-skill` tool scaffolds the structure, and the SKILL.md format is designed for progressive disclosure  --  agents see the description first, then load full instructions on demand.
 
 ## Using write-a-skill
 
@@ -12,9 +12,9 @@ The easiest way to create a skill:
 
 This launches an interactive process that:
 
-1. **Gathers requirements** — What task/domain does the skill cover? What specific use cases? Does it need executable scripts or just instructions?
-2. **Drafts the skill** — Creates SKILL.md with concise instructions, plus additional reference files if needed
-3. **Reviews with you** — Presents the draft and asks if anything is missing or unclear
+1. **Gathers requirements**  --  What task/domain does the skill cover? What specific use cases? Does it need executable scripts or just instructions?
+2. **Drafts the skill**  --  Creates SKILL.md with concise instructions, plus additional reference files if needed
+3. **Reviews with you**  --  Presents the draft and asks if anything is missing or unclear
 
 ## Skill Structure
 
@@ -43,7 +43,7 @@ description: What the skill does. Use when [specific triggers].
 
 ## Quick start
 
-[Minimal working example — what the agent does first]
+[Minimal working example  --  what the agent does first]
 
 ## Workflows
 
@@ -90,9 +90,9 @@ Description requirements:
 
 Skills use progressive disclosure to manage context. The agent sees:
 
-1. **Description** — Always visible in the system prompt. Short, trigger-focused.
-2. **SKILL.md body** — Loaded when the skill is activated. The full workflow.
-3. **Reference files** — Loaded only when the agent needs deeper detail.
+1. **Description**  --  Always visible in the system prompt. Short, trigger-focused.
+2. **SKILL.md body**  --  Loaded when the skill is activated. The full workflow.
+3. **Reference files**  --  Loaded only when the agent needs deeper detail.
 
 This means your SKILL.md should be concise (under 100 lines). Split into separate files when:
 
@@ -108,7 +108,7 @@ Add utility scripts to your skill when:
 - The same code would be generated repeatedly
 - Errors need explicit handling
 
-Scripts save tokens and improve reliability compared to generated code. They're part of the skill's bundled resources — the agent can call them without regenerating them each time.
+Scripts save tokens and improve reliability compared to generated code. They're part of the skill's bundled resources  --  the agent can call them without regenerating them each time.
 
 ## Where to Install Skills
 
@@ -128,10 +128,10 @@ Project-level skills override global skills with the same name. Both override bu
 
 To share your skill with others:
 
-1. **GitHub repository** — Create a repo with your skill directory structure
-2. **SKILL.md as entry point** — The root SKILL.md is what agents load
-3. **README for humans** — Include installation instructions for manual setup
-4. **Reference docs** — Bundle any EXAMPLES.md, REFERENCE.md, or scripts
+1. **GitHub repository**  --  Create a repo with your skill directory structure
+2. **SKILL.md as entry point**  --  The root SKILL.md is what agents load
+3. **README for humans**  --  Include installation instructions for manual setup
+4. **Reference docs**  --  Bundle any EXAMPLES.md, REFERENCE.md, or scripts
 
 Users install by cloning or copying your skill directory into their `.opencode/skills/` folder.
 
@@ -170,7 +170,7 @@ When the user asks to commit, enforce conventional commit format:
 - `docs(api): update endpoint descriptions`
 ```
 
-This is a complete, working skill. No scripts, no reference files — just clear instructions that reshape how the agent handles commits.
+This is a complete, working skill. No scripts, no reference files  --  just clear instructions that reshape how the agent handles commits.
 
 ## Composing Custom Skills with Categories
 

@@ -9,7 +9,7 @@ The #1 failure mode in AI-assisted development: the agent builds something diffe
 ## The Flow
 
 1. **Invoke /grill-me** with your refactoring goal
-2. Sisyphus interviews you relentlessly — clarifying scope, naming, patterns, edge cases
+2. Sisyphus interviews you relentlessly  --  clarifying scope, naming, patterns, edge cases
 3. Once aligned, Sisyphus produces a plan
 4. Execute the plan with /start-work or direct delegation
 5. Verify each step
@@ -28,7 +28,7 @@ User: "Yes, and keep UserService as a thin facade"
 Sisyphus: "Should existing tests keep passing after each split? Or can we batch the test fixes?"
 User: "Keep tests green after each extraction"
 
-Sisyphus: "Naming convention — PascalCase files, or kebab-case?"
+Sisyphus: "Naming convention  --  PascalCase files, or kebab-case?"
 ...
 ```
 

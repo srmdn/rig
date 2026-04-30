@@ -1,6 +1,6 @@
 # Matt Pocock Skills
 
-Matt Pocock's engineering skills are the most established plugin skill set for OpenCode. They provide structured workflows for the entire software development lifecycle — from planning and alignment through debugging, testing, and architecture improvement.
+Matt Pocock's engineering skills are the most established plugin skill set for OpenCode. They provide structured workflows for the entire software development lifecycle  --  from planning and alignment through debugging, testing, and architecture improvement.
 
 These are **plugin skills**, not built-in. They need to be installed and configured per-repo.
 
@@ -130,7 +130,7 @@ Breaks a plan, spec, or PRD into independently-grabbable issues using tracer-bul
 
 #### `/to-prd`
 
-Turns the current conversation context into a Product Requirements Document and publishes it to the project backlog. Does not interview the user — synthesizes what's already known.
+Turns the current conversation context into a Product Requirements Document and publishes it to the project backlog. Does not interview the user  --  synthesizes what's already known.
 
 **When to use:** Creating a PRD from an existing conversation. You've already discussed the feature and want to formalize it.
 
@@ -142,7 +142,7 @@ Turns the current conversation context into a Product Requirements Document and 
 
 #### `/improve-codebase-architecture`
 
-Surfaces architectural friction and proposes deepening opportunities — refactors that turn shallow modules into deep ones. Informed by the project's domain language (`CONTEXT.md`) and past decisions (`docs/adr/`).
+Surfaces architectural friction and proposes deepening opportunities  --  refactors that turn shallow modules into deep ones. Informed by the project's domain language (`CONTEXT.md`) and past decisions (`docs/adr/`).
 
 **When to use:** Improving architecture, finding refactoring opportunities, consolidating tightly-coupled modules, making a codebase more testable and AI-navigable.
 
@@ -188,4 +188,4 @@ The category determines the model and behavior. The skill determines the workflo
 
 ## Beyond Matt's Skills
 
-Matt's engineering toolkit is one plugin ecosystem among many. The skills system is open — anyone can write and publish skills. See [Create Your Own](/skills/create) for how to build custom skills, and the [MCP Integration](/skills/mcp) page for how external tool servers extend agent capabilities.
+Matt's engineering toolkit is one plugin ecosystem among many. The skills system is open  --  anyone can write and publish skills. See [Create Your Own](/skills/create) for how to build custom skills, and the [MCP Integration](/skills/mcp) page for how external tool servers extend agent capabilities.

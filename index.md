@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Rig"
   text: "OpenCode & oMO<br>Community Wiki"
-  tagline: Agent pipeline, skills ecosystem, playbooks, and setup guides — everything you need to ship faster with AI tooling.
+  tagline: Agent pipeline, skills ecosystem, playbooks, and setup guides  --  everything you need to ship faster with AI tooling.
   actions:
     - theme: brand
       text: Get Started

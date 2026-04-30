@@ -1,4 +1,4 @@
-# Prometheus — Planner
+# Prometheus  --  Planner
 
 Prometheus is the planning agent. It takes your high-level goal and breaks it into a structured, executable plan. It only runs when you invoke `/start-work`.
 
@@ -6,7 +6,7 @@ Prometheus is the planning agent. It takes your high-level goal and breaks it in
 
 1. **Explores the codebase** (if one exists) to understand existing patterns, conventions, and structure
 2. **Decomposes your goal** into ordered tasks with dependencies
-3. **Identifies parallelization opportunities** — tasks that can run simultaneously
+3. **Identifies parallelization opportunities**  --  tasks that can run simultaneously
 4. **Defines verification criteria** for each task
 5. **Saves the plan** to `.sisyphus/plans/<name>.md`
 
@@ -28,12 +28,12 @@ This triggers:
 
 Plans are saved as markdown files in `.sisyphus/plans/`. A plan contains:
 
-- **Goal** — What you asked for, restated clearly
-- **Tasks** — Ordered list of implementation steps, each with:
+- **Goal**  --  What you asked for, restated clearly
+- **Tasks**  --  Ordered list of implementation steps, each with:
   - Description
   - Dependencies on other tasks
   - Verification criteria (tests, build, lint)
-- **Parallelization hints** — Which tasks can run concurrently
+- **Parallelization hints**  --  Which tasks can run concurrently
 
 Example structure:
 
@@ -95,6 +95,6 @@ Build a Go REST API for bookmark management with SQLite, tags, and JWT auth.
 
 ## See Also
 
-- [Atlas — Orchestrator](/pipeline/atlas) — What happens after the plan is created
-- [Sisyphus — Executor](/pipeline/sisyphus) — The agent that does the actual work
-- [Start a New Project](/playbooks/new-project) — Full walkthrough with Prometheus
+- [Atlas  --  Orchestrator](/pipeline/atlas)  --  What happens after the plan is created
+- [Sisyphus  --  Executor](/pipeline/sisyphus)  --  The agent that does the actual work
+- [Start a New Project](/playbooks/new-project)  --  Full walkthrough with Prometheus

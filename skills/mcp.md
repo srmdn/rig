@@ -1,10 +1,10 @@
 # MCP Integration
 
-Model Context Protocol (MCP) servers extend agents with external tools that go beyond code — browser automation, database access, filesystem operations, web search, and more.
+Model Context Protocol (MCP) servers extend agents with external tools that go beyond code  --  browser automation, database access, filesystem operations, web search, and more.
 
 ## What Is MCP?
 
-MCP is an open protocol that lets agents connect to external tool servers. An MCP server exposes tools, resources, and prompts that an agent can call during a session. Think of it as a plugin system for agent capabilities — but instead of injecting instructions, it injects live tools.
+MCP is an open protocol that lets agents connect to external tool servers. An MCP server exposes tools, resources, and prompts that an agent can call during a session. Think of it as a plugin system for agent capabilities  --  but instead of injecting instructions, it injects live tools.
 
 The key difference from skills: **skills inject knowledge and workflows**. **MCP servers inject live tools**. They're complementary.
 
