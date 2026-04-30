@@ -2,12 +2,6 @@
 /* Dark-first, minimal, developer-tool feel */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-.VPAppearance,
-.VPNavScreenAppearance {
-  display: none !important;
-}
-
 :root,
 html.dark {
   /* Backgrounds */
@@ -166,6 +160,10 @@ html.dark {
    Navbar
    ========================================================================== */
 
+.VPNavScreen {
+  z-index: var(--vp-z-index-backdrop);
+}
+
 .VPNav {
   border-bottom: 1px solid #333333;
   backdrop-filter: blur(12px);
@@ -181,6 +179,19 @@ html.dark {
 }
 
 .VPNav .divider { background: #333333; }
+
+/* Hide the ··· extra flyout (shows 768–1280px, confusing when it only
+   contains the GitHub link). Show social links directly instead. */
+.VPNavBarExtra {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .VPNavBarSocialLinks {
+    display: flex !important;
+    align-items: center;
+  }
+}
 
 /* ==========================================================================
    Code blocks
