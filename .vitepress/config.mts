@@ -25,7 +25,8 @@ export default defineConfig({
       { text: "Pipeline", link: "/pipeline/" },
     ],
 
-    sidebar: [
+    sidebar: {
+      "/": [
       {
         text: "Getting Started",
         items: [
@@ -87,6 +88,7 @@ export default defineConfig({
         ],
       },
     ],
+    },
 
     socialLinks: [
       { icon: "github", link: "https://github.com/srmdn/rig" },
