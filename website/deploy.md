@@ -1,12 +1,12 @@
 # Deploy
 
-How to deploy Rig to VPS at rig.srmdn.com.
+How to deploy Rig to a static web host.
 
 ## Prerequisites
 
 - VPS with Nginx installed
 - certbot for SSL
-- srmdn-ops repo cloned on VPS
+- A target web root such as `/var/www/YOUR_SITE`
 
 ## Steps
 
@@ -20,19 +20,19 @@ pnpm build
 ### 2. Upload dist to VPS
 
 ```bash
-scp -r dist/ user@vps:/var/www/rig_srmdn_c_usr/data/www/rig.srmdn.com/
+scp -r dist/ USER@HOST:/var/www/YOUR_SITE/
 ```
 
 ### 3. Nginx config
 
-Copy `website/rig.srmdn.com.conf` to `/etc/nginx/sites-available/` on the VPS, then:
+Create an Nginx server block for `YOUR_DOMAIN`, then:
 
 ```bash
-ln -s /etc/nginx/sites-available/rig.srmdn.com.conf /etc/nginx/sites-enabled/
-certbot --nginx -d rig.srmdn.com
+ln -s /etc/nginx/sites-available/YOUR_DOMAIN.conf /etc/nginx/sites-enabled/
+certbot --nginx -d YOUR_DOMAIN
 nginx -t && systemctl reload nginx
 ```
 
 ### 4. Verify
 
-Visit `https://rig.srmdn.com`.
+Visit `https://YOUR_DOMAIN`.
