@@ -10,9 +10,6 @@
     "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.git\" \"#**/.vitepress/dist\" \"#cli/node_modules\"",
     "check": "pnpm lint && pnpm build"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
-  },
   "devDependencies": {
     "markdownlint-cli2": "^0.20.0",
     "vitepress": "^1.6.4"

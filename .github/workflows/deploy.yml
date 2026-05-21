@@ -29,6 +29,8 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      - run: pnpm config set onlyBuiltDependencies '["esbuild"]' --location project
+
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm build
