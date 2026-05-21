@@ -9,9 +9,23 @@ const TEMPLATES_DIR = join(
   "templates",
 );
 
+interface AgentOverride {
+  textVerbosity?: string;
+  thinking?: { budgetTokens?: number; type?: string };
+}
+
+interface CategoryOverride {
+  textVerbosity?: string;
+  thinking?: { budgetTokens?: number; type?: string };
+}
+
 interface StackProfile {
   name: string;
   description: string;
+  disabled_skills?: string[];
+  disabled_mcps?: string[];
+  agent_overrides?: Record<string, AgentOverride>;
+  category_overrides?: Record<string, CategoryOverride>;
 }
 
 async function discoverStacks(): Promise<Map<string, StackProfile>> {
@@ -236,6 +250,7 @@ function generateOhMyOpenagent(
   providers: Provider[],
   budget: BudgetTier,
   orchestratorModel: string,
+  profile?: StackProfile,
 ): OhMyOpenagentConfig {
   const pool = buildPool(providers);
 
@@ -252,6 +267,14 @@ function generateOhMyOpenagent(
     agents[name] = agent;
   }
 
+  if (profile?.agent_overrides) {
+    for (const [name, override] of Object.entries(profile.agent_overrides)) {
+      if (agents[name]) {
+        agents[name] = { ...agents[name], ...override };
+      }
+    }
+  }
+
   const categories: Record<string, CategoryConfig> = {};
   for (const name of ALL_CATEGORIES) {
     const tier = effectiveTier(CATEGORY_TIERS[name], budget, false);
@@ -260,10 +283,24 @@ function generateOhMyOpenagent(
     categories[name] = { model, textVerbosity: "low", fallback_models };
   }
 
+  if (profile?.category_overrides) {
+    for (const [name, override] of Object.entries(
+      profile.category_overrides,
+    )) {
+      if (categories[name]) {
+        categories[name] = { ...categories[name], ...override };
+      }
+    }
+  }
+
   return {
     $schema: "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
-    disabled_skills: [],
-    disabled_mcps: [],
+    disabled_skills: profile?.disabled_skills
+      ? [...new Set(profile.disabled_skills)]
+      : [],
+    disabled_mcps: profile?.disabled_mcps
+      ? [...new Set(profile.disabled_mcps)]
+      : [],
     agents,
     categories,
   };
@@ -545,6 +582,7 @@ export async function initCommand(): Promise<void> {
   try {
     const stacks = await discoverStacks();
     const stack = await promptStack(stacks);
+    const profile = stacks.get(stack) ?? stacks.get("generic");
     const providers = await promptProviders();
     const orchestratorModel = await promptOrchestrator(providers);
     const budget = await promptBudget();
@@ -553,6 +591,7 @@ export async function initCommand(): Promise<void> {
       providers,
       budget,
       orchestratorModel,
+      profile,
     );
     const openCodeConfig = generateOpenCodeConfig(orchestratorModel);
     const tuiConfig = generateTuiConfig();

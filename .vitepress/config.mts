@@ -5,6 +5,7 @@ export default defineConfig({
   description: "Community wiki for OpenCode & oMO — agent pipeline, skills ecosystem, playbooks, and setup guides.",
 
   lang: "en-US",
+  base: "/rig/",
   cleanUrls: true,
   lastUpdated: true,
   appearance: false,

@@ -2,5 +2,6 @@ node_modules/
 dist/
 .vitepress/dist/
 .vitepress/cache/
+.sisyphus/
 *.log
 .DS_Store
