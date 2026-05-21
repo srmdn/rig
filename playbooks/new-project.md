@@ -8,6 +8,10 @@
 - oh-my-openagent configured (`oh-my-openagent.json` in place)
 - A clear idea of what you want to build
 
+::: tip Quick setup
+Don't have `oh-my-openagent.json` yet? Run `bunx omo-kit init` to generate a full config in seconds. [Learn more →](/cli/init)
+:::
+
 ---
 
 ## Step 1: Frame the Idea

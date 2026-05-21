@@ -6,7 +6,8 @@
     "dev": "vitepress dev . --host 127.0.0.1",
     "build": "vitepress build .",
     "preview": "vitepress preview . --host 127.0.0.1 --port 4173",
-    "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.git\" \"#**/.vitepress/dist\"",
+    "cli": "bun run cli/src/index.ts",
+    "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.git\" \"#**/.vitepress/dist\" \"#cli/node_modules\"",
     "check": "pnpm lint && pnpm build"
   },
   "devDependencies": {

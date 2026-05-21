@@ -31,6 +31,7 @@ export default defineConfig({
     nav: [
       { text: "Start Here", link: "/getting-started/" },
       { text: "Pipeline", link: "/pipeline/" },
+      { text: "CLI", link: "/cli/" },
     ],
 
     sidebar: [
@@ -84,6 +85,15 @@ export default defineConfig({
           { text: "Agent Settings", link: "/reference/agents" },
           { text: "Category Settings", link: "/reference/categories" },
           { text: "FAQ", link: "/reference/faq" },
+        ],
+      },
+      {
+        text: "omo-kit CLI",
+        items: [
+          { text: "Overview", link: "/cli/" },
+          { text: "init — Config Generator", link: "/cli/init" },
+          { text: "doctor — Config Validator", link: "/cli/doctor" },
+          { text: "theme — Theme Tool", link: "/cli/theme" },
         ],
       },
       {

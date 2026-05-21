@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to **Rig**: the community wiki for [OpenCode](https://github.com/opencode-ai/opencode) and [oh-my-openagent](https://github.com/srmdn/oh-my-openagent) (oMO).
+Welcome to **Rig**: the community wiki for [OpenCode](https://github.com/anomalyco/opencode) and [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) (oMO).
 
 If you're new to AI-assisted coding, or just new to this toolchain, you're in the right place. This section walks you through everything you need to go from zero to productive.
 
@@ -33,6 +33,7 @@ Once you're up and running, explore the rest of the wiki:
 - [Skills Ecosystem](/skills/) — built-in skills, categories, and creating your own.
 - [Playbooks](/playbooks/) — real workflows for real tasks.
 - [Reference](/reference/) — deep configuration docs for `oh-my-openagent.json`, model selection, and more.
+- [omo-kit CLI](/cli/) — generate configs, validate setups, manage themes.
 
 ## A note on conventions
 

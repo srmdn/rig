@@ -1,6 +1,6 @@
 # Rig
 
-Community wiki for [OpenCode](https://github.com/opencode-ai/opencode) and [oh-my-openagent](https://github.com/srmdn/oh-my-openagent). Agent pipeline, skills ecosystem, playbooks, and setup guides: everything you need to ship faster with AI tooling.
+Community wiki for [OpenCode](https://github.com/anomalyco/opencode) and [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent). Agent pipeline, skills ecosystem, playbooks, and setup guides — plus `omo-kit`, the CLI that generates your configs so you don't write JSON by hand.
 
 ## What is this?
 

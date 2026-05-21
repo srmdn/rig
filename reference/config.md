@@ -1,5 +1,9 @@
 # Configuration Reference
 
+::: tip Don't want to write JSON by hand?
+Use `bunx omo-kit init` — interactive prompts generate your full config. [See how →](/cli/init)
+:::
+
 The `oh-my-openagent.json` file lives at `~/.config/opencode/oh-my-openagent.json`.
 
 ## Structure

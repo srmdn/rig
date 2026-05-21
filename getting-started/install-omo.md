@@ -1,52 +1,37 @@
 # Installing oh-my-openagent (oMO)
 
-oh-my-openagent (oMO) is a configuration layer and skill ecosystem that sits on top of OpenCode. It adds structure, conventions, and a multi-agent pipeline so you can do more with less prompting.
-
-## What oMO adds
-
-OpenCode on its own is a single-agent chat interface. You type a prompt, the agent responds. That works, but it has limits:
-
-- **No planning step**: the agent jumps straight into code without thinking through the approach.
-- **No specialization**: one agent does everything, even tasks that benefit from focused expertise.
-- **No project conventions**: every session starts from scratch unless you manually paste context.
-
-oMO solves this by layering on:
-
-- **The agent pipeline**: a structured flow where Prometheus plans, Atlas orchestrates, and Sisyphus executes. Each agent has a defined role. See [The oMO Pipeline](/pipeline/) for the full breakdown.
-- **Skills**: reusable prompt templates and workflows you can invoke with slash commands (e.g., `/tdd`, `/diagnose`, `/grill-me`). See [Skills Ecosystem](/skills/).
-- **Project conventions**: `CLAUDE.md` and `AGENTS.md` files that tell agents about your stack, rules, and preferences. No more pasting context every session.
-- **Category agents**: specialized sub-agents for visual engineering, documentation, exploration, and more. See [Category Agents](/pipeline/categories).
+oh-my-openagent (oMO) is a configuration layer and skill ecosystem that sits on top of OpenCode. It adds a multi-agent pipeline (Prometheus → Atlas → Sisyphus), category-based model routing, and 50+ lifecycle hooks.
 
 ## Prerequisites
 
 - **OpenCode** installed and working — see [Install OpenCode](/getting-started/install-opencode) if you haven't yet.
-- **Git**: oMO is installed by cloning its repository.
-- **Node.js** 18+ — some skills and tooling depend on it.
+- **Bun** — OMO runs on Bun. `curl -fsSL https://bun.sh/install | bash` if needed.
 
-## Install oMO
-
-### 1. Clone the repository
+## Install
 
 ```bash
-git clone https://github.com/srmdn/oh-my-openagent.git ~/.config/opencode/install
+bunx oh-my-openagent install
 ```
 
-This clones oMO into OpenCode's config directory at `~/.config/opencode/install/`. OpenCode automatically picks up configurations from this location.
-
-### 2. Run the installer
+Or via OpenCode's built-in plugin manager:
 
 ```bash
-cd ~/.config/opencode/install
-./install.sh
+opencode plugin oh-my-openagent
 ```
 
-The installer does three things:
+Both do the same thing: register the plugin, install default skills, and create agent pipeline config.
 
-1. **Links configuration files**: connects oMO's `oh-my-openagent.json` to OpenCode's config so the pipeline and agents are recognized.
-2. **Installs default skills**: copies the built-in skill set into `~/.config/opencode/skills/`.
-3. **Creates project templates**: sets up default `CLAUDE.md` and `AGENTS.md` templates you can customize per project.
+::: tip Quick setup
+Prefer a guided experience? Use `omo-kit` (bundled with Rig):
 
-### 3. Verify the installation
+```bash
+bunx omo-kit setup
+```
+
+Interactive prompts generate your `oh-my-openagent.json` with model chains, thinking budgets, and category routing — validated before save. [Learn more →](/reference/config)
+:::
+
+## Verify
 
 Open any project and start OpenCode:
 
@@ -55,58 +40,39 @@ cd ~/Developer/projects/my-project
 opencode
 ```
 
-Inside the TUI, type:
+Inside the TUI, type `/help`. You should see oMO slash commands (`/start-work`, `/diagnose`, `/grill-me`) listed alongside OpenCode built-ins.
 
-```
-/help
-```
-
-You should see oMO's slash commands listed alongside OpenCode's built-in ones. Commands like `/start-work`, `/diagnose`, and `/grill-me` come from oMO.
-
-You can also check that the pipeline agents are loaded:
+Check agents are loaded:
 
 ```
 /agents
 ```
 
-This should list Prometheus, Atlas, Sisyphus, and Oracle among the available agents.
+Should list Prometheus, Atlas, Sisyphus, Oracle, and subagents.
 
-## What got installed where
+## What got installed
 
-After installation, you'll find files in these locations:
+| Path | What |
+|---|---|
+| `~/.config/opencode/oh-my-openagent.json` | Agent and category model routing |
+| `~/.config/opencode/plugins/` | OMO plugin registration |
+| `~/.config/opencode/skills/` | Built-in skill definitions |
 
-| Path | What it is |
-|------|-----------|
-| `~/.config/opencode/install/` | oMO repository (the source) |
-| `~/.config/opencode/config.json` | OpenCode config, now referencing oMO's pipeline |
-| `~/.config/opencode/skills/` | Installed skill definitions |
-| `~/.config/opencode/install/agents/` | Agent definitions (Prometheus, Atlas, etc.) |
+Project-level files oMO reads automatically:
 
-In your project repos, oMO may create or update:
+| File | Purpose |
+|---|---|
+| `CLAUDE.md` | Project conventions for Claude Code sessions |
+| `AGENTS.md` | Project conventions for OpenCode agents |
 
-| File | What it is |
-|------|-----------|
-| `CLAUDE.md` | Project instructions for Claude Code |
-| `AGENTS.md` | Project instructions for OpenCode agents |
-
-These project-level files are optional but recommended. They tell agents about your stack, conventions, and rules so every session starts with context.
-
-## Updating oMO
-
-Pull the latest changes and re-run the installer:
+## Updating
 
 ```bash
-cd ~/.config/opencode/install
-git pull
-./install.sh
+bunx oh-my-openagent install
 ```
 
-The installer is idempotent — running it again won't overwrite your customizations unless the upstream defaults have changed.
+The installer is idempotent — re-running won't overwrite customizations unless upstream defaults have changed.
 
-::: warning
-If you've customized `oh-my-openagent.json` or skill files, check for conflicts after updating. The installer preserves local changes where possible, but major version bumps may require manual merging.
-:::
+## Next
 
-## Next step
-
-With both OpenCode and oMO installed, you're ready for [Your First Session](/getting-started/first-session) — where you'll open a project, ask Sisyphus a question, and see the pipeline in action.
+[Your First Session →](/getting-started/first-session)
