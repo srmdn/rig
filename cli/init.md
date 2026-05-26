@@ -43,7 +43,7 @@ $ bunx omo-kit init
   • AGENTS.md
 
 ✔ Ready. Start with: opencode
-  Docs: https://github.com/srmdn/rig/tree/main/cli
+  Docs: https://github.com/srmdn/omo-kit
 ```
 
 ## After init

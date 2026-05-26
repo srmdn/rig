@@ -5,10 +5,10 @@ The companion CLI for Rig. Generates configs, validates them, and manages themes
 ## Install
 
 ```bash
-bunx omo-kit --help
+bun install -g omo-kit
 ```
 
-Bundled with Rig. Zero config needed — works with any OpenCode + OMO setup.
+Source: [github.com/srmdn/omo-kit](https://github.com/srmdn/omo-kit)
 
 ## Commands
 

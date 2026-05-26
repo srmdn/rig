@@ -18,18 +18,17 @@ Generate, validate, and manage your oh-my-openagent configuration without touchi
 ```bash
 # Install (requires Bun)
 bun install -g omo-kit
-
-# Or run directly
-git clone https://github.com/srmdn/rig && cd rig/cli && bun install
 ```
+
+Source: [github.com/srmdn/omo-kit](https://github.com/srmdn/omo-kit)
 
 ### Commands
 
 ```
-bunx omo-kit init       Generate oh-my-openagent.json, opencode.json, tui.json,
-                          CLAUDE.md, and AGENTS.md interactively
-bunx omo-kit doctor     Validate existing config files for common issues
-bunx omo-kit theme      Validate or generate OpenCode themes
+omo-kit init       Generate oh-my-openagent.json, opencode.json, tui.json,
+                  CLAUDE.md, and AGENTS.md interactively
+omo-kit doctor     Validate existing config files for common issues
+omo-kit theme      Validate or generate OpenCode themes
 ```
 
 **init** walks you through:
@@ -56,7 +55,7 @@ pnpm build    # outputs to .vitepress/dist/
 
 ## Stack templates
 
-Drop a new directory in `cli/src/templates/` with `CLAUDE.md`, `AGENTS.md`, and `profile.json` — it's auto-discovered by `init`. No code changes needed.
+Drop a new directory in `src/templates/` in the [omo-kit repo](https://github.com/srmdn/omo-kit) with `CLAUDE.md`, `AGENTS.md`, and `profile.json` — it's auto-discovered by `init`. No code changes needed.
 
 Templates ship with `profile.json` for agent tuning:
 - **Go, Rust**: disable frontend skills/MCPs, oracle thinking 16K tokens
